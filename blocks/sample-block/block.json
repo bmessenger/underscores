@@ -1,0 +1,14 @@
+{
+	"name": "acf/sample-block",
+	"title": "Sample Block",
+	"description": "Sample Block to use as a refrence",
+	"style": [ "file:./sample-block.css" ],
+	"category": "acf-blocks",
+	"icon": "admin-post",
+	"keywords": ["sample", "reference", "demo"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "sample-block.php"
+	},
+	"align": "full"
+}

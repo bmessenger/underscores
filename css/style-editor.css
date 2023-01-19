@@ -1,0 +1,19 @@
+/*!
+*
+This stylesheet is used to pull in any or all styles from the main
+style.css file and load them in the admin.
+
+This allows users within the admin to preview the page during
+the editing process.
+*
+*/
+
+/* First we Import Bootstrap */
+@import "../lib/bootstrap/css/bootstrap.min.css";
+
+/* Then we add custom styles here (can simply be copied from style.css) */
+
+/* Increase width of default blocks */
+html :where(.wp-block) {
+	max-width: 1200px;
+}

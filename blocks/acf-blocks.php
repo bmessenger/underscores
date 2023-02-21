@@ -28,19 +28,6 @@ add_filter( 'block_categories_all' , function( $categories ) {
 	return $categories;
 } );
 
-/* Load front-end styles into the editor for nice previews */
-function blocks_editor_scripts() {
-	$editor_style_path = '/css/style-editor.css';
-
-	wp_enqueue_style(
-		'block-editor-styles',
-		get_stylesheet_directory_uri() . $editor_style_path,
-		['wp-edit-blocks'],
-		filemtime(get_template_directory() . $editor_style_path)
-	);
-}
-add_action('enqueue_block_editor_assets', 'blocks_editor_scripts');
-
 /* Register Blocks - https://www.advancedcustomfields.com/resources/blocks/ */
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {

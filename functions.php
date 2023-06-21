@@ -149,8 +149,9 @@ function thegrove_scripts() {
 	wp_enqueue_script( 'thegrove-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	
 	/* Our main Javascript file.  Get the timestamp and set it as the version (forces reload after making updates) */
-	$stmp = filemtime( get_stylesheet_directory() . '/js/main.js' );
+	$stmp = filemtime( get_template_directory() . '/js/main.js' );
 	wp_enqueue_script( 'thegrove-custom-js', get_template_directory_uri() . '/js/main.js', array('jquery'), $stmp, true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
